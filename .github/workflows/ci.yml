@@ -1,0 +1,14 @@
+name: generate-coverage
+on: [push]
+jobs:
+  style_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.12
+      - uses: psf/black@stable
+        with:
+          options: "--check --verbose"
