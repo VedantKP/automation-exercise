@@ -1,4 +1,4 @@
-name: generate-coverage
+name: SSE CI/CD
 on: [push]
 jobs:
   style_check:
